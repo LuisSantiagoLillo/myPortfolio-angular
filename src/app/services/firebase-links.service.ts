@@ -6,25 +6,18 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/fire
   providedIn: 'root'
 })
 export class FirebaseLinksService {
-  private itemsCollection: AngularFirestoreCollection<Link>;
-  public arrayLinks: Link[] = [];
+  private itemsCollection: AngularFirestoreCollection<any>;
+  public arrayLinks: any[] = [];
 
       constructor(private afs: AngularFirestore) {
-        this.itemsCollection = this.afs.collection<Link>('links');
+        this.itemsCollection = this.afs.collection<any>('links');
     }
 
 
     loadLinks() {
-      return this.itemsCollection.valueChanges().subscribe( (links: Link[]) => {
+      return this.itemsCollection.valueChanges().subscribe( (links: any[]) => {
         this.arrayLinks = links;
       });
     }
 
-}
-
-
-
-export interface Link {
-  site: string;
-  link: string;
 }
