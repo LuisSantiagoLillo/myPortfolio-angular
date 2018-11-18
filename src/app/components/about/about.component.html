@@ -1,0 +1,116 @@
+<!-- ABOUT ME -->
+<div class="container-fluid" id="about">
+    <div class="row pt-5 ml-2">
+
+        <div class="col-12 col-md-6">
+            <div id="skills">
+                <div class="row mt-2">
+                    <div class="col-12" id="skills_titulo">
+                        <h3 class="text-muted text-center font-italic"><strong>Developer <code>Skills</code> </strong> <button type="button" class="btn btn-outline-info btn-sm ml-2" (click)="changeSkills()">Change</button></h3>
+
+                    </div>
+                    <!--  SKILLS BARRAS  -->
+                    <div class="col-12 card-body" id="skills_barras" *ngIf="skills">
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width:80%"> HTML5 - 80%</div>
+                        </div>
+                        <div class="progress mb-2">
+                            <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width:80%">CSS3 - 80%</div>
+                        </div>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-info" role="progressbar" style="width:80%">Bootstrap - 80%</div>
+                        </div>
+                        <hr>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width:90%"> JavaScript - 90%</div>
+                        </div>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width:90%"><strong>Angular - 90%</strong></div>
+                        </div>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-success" role="progressbar" style="width:70%; color:black"><strong>NodeJS - 70%</strong></div>
+                        </div>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-success" role="progressbar" style="width:60%; color:white"><strong>MongoDB - 60%</strong></div>
+                        </div>
+                        <hr>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width:80%; color: black"><strong>JAVA- 80%</strong></div>
+                        </div>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-success" role="progressbar" style="width:70%; color:white"><strong>Android - 70%</strong></div>
+                        </div>
+                        <hr>
+                    </div>
+                    <!--  SKILLS BARRAS  -->
+                    <div class="col-12 card-body" id="skills_barras" *ngIf="!skills">
+                        <div>
+                            <canvas baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [chartType]="radarChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-12 col-md-6" id="skills_resumen">
+            <h3 class="text-muted text-center font-italic"><strong>Academic <code>degree</code> </strong></h3>
+            <div class="jumbotron background-academic-degree">
+                <div class="container">
+                    <p>Student in Software Development - Development of cross-platform applications (DAM), Computer and communications. Distance Modality from 2016 to 2018. </p>
+                    <p>
+                        Avarage Grade of the second year <span class="badge badge-primary">9</span>
+                    </p>
+                    <div>
+                        <button class="btn btn-primary disabled mt-2">Data Access
+                                <span class="badge badge-light">9</span>
+                            </button>
+                        <button class="btn btn-primary disabled mt-2 ml-1">Interfaces Development
+                                <span class="badge badge-light">9</span>
+                            </button>
+                        <button class="btn btn-primary disabled mt-2 ml-1">Android
+                                <span class="badge badge-light">9</span>
+                            </button>
+                        <button class="btn btn-primary disabled mt-2 ml-1">Services and processes
+                                <span class="badge badge-light">8</span>
+                            </button>
+                        <button class="btn btn-primary disabled mt-2 ml-1">Business Management Systems
+                                <span class="badge badge-light">10</span>
+                            </button>
+                    </div>
+                    <p class="lead mt-4"><strong>Self-taught WebApp Developer</strong>, in love to <code>MEAN stack</code>. Learning to be a <code>full stack developer</code>.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 pb-3">
+            <div id="works">
+                <h3 class="container text-muted text-center font-italic"><strong>Work <code>Experience</code> </strong></h3>
+                <div class="row">
+                    <div class="col mt-2 text-center">
+                        <figure class="figure ml-5">
+                            <a [href]="_linkService.arrayLinks[0].spowty"><img class="figure-img img-fluid rounded" src="assets/img/spowty.png" width="400px" height="400px" alt=""></a>
+                            <figcaption class="figure-caption">SPA-WebApp with Angular.</figcaption>
+                        </figure>
+
+                        <figure class="figure ml-5">
+                            <a href="#"><img class="img-fluid rounded" src="assets/img/design1.jpg" width="400px" height="400px" alt=""></a>
+                            <figcaption class="figure-caption">In progress.</figcaption>
+                        </figure>
+                    </div>
+                    <!--
+                    <div class="col-12 col-md-6 mt-2">
+                        <a href="#"><img class="img-fluid rounded" src="assets/img/design2.jpg" width="400px" height="400px" alt=""></a>
+                    </div>
+                    <div class="col-12 col-md-6 mt-2">
+                        <a href="#"><img class="img-fluid rounded" src="assets/img/design3.jpg" width="400px" height="400px" alt=""></a>
+                    </div>
+                    -->
+
+                </div>
+                <hr>
+            </div>
+        </div>
+
+    </div>
+</div>

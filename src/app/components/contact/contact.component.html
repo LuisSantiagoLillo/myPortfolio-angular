@@ -1,0 +1,94 @@
+<!-- CONTACT -->
+<div class="bg-dark">
+
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+
+    <div class="container mt-4" id="contact">
+        <div class="row">
+            <div class="col-12">
+                <figcaption class="figure-caption text-right">My current location is Madrid, Spain.</figcaption>
+            </div>
+        </div>
+
+
+
+        <div class="row mt-5 d-flex justify-content-center">
+            <div class="col-2 mr-5" id="details">
+                <figure class="figure">
+                    <img src="assets/img/avatar_friki.png" class="rounded" alt="Cinque Terre">
+                    <figcaption class="figure-caption d-flex align-items-center justify-content-center mt-3">
+                        <a [href]="_linkService.arrayLinks[0].linkedin">
+                            <button class="btn btn-outline-success mr-1"><i class="fab fa-linkedin-in"></i></button>
+                        </a>
+                        <a [href]="_linkService.arrayLinks[0].github">
+                            <button class="btn btn-outline-success mr-1"><i class="fab fa-github"></i></button>
+                        </a>
+                        <a [href]="_linkService.arrayLinks[0].spowty">
+                            <button class="btn btn-outline-success mr-1"><i class="fas fa-music"></i></button>
+                        </a>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col mr-5 pr-5 mt-5 d-flex justify-content-start contact-opacity" id="special-cards">
+                <ul class="lista-cartas list-inline">
+                    <li class="list-inline-item">
+                        <a [href]="_linkService.arrayLinks[0].github">
+                            <h1><span class="badge badge-info">Visit my GitHub account</span></h1>
+                        </a>
+
+                    </li>
+                    <li class="list-inline-item">
+                        <a [href]="_linkService.arrayLinks[0].linkedin">
+                            <h2><span class="badge badge-warning">Visit my Linkedin account</span></h2>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a [href]="_linkService.arrayLinks[0].infojobs">
+                            <h1><span class="badge badge-success">Visit my InfoJobs account</span></h1>
+                        </a>
+                    </li>
+                    <h4 class="text-center text-light mt-2 mb-5">SOCIAL NETWORKS</h4>
+
+                </ul>
+            </div>
+            <div class="col pr-5 pb-3" id="form_contact">
+                <div *ngIf="error" class="alert alert-{{color}}">
+                    <strong>{{title}}</strong> {{message2}}
+                </div>
+                <form (ngSubmit)="addMessage(forma)" #forma="ngForm" novalidate="">
+                    <h4 class="text-center text-light">CONTACT ME</h4>
+
+                    <div class="form-group">
+                        <input class="form-control mb-3" type="text" name="name" [(ngModel)]="report.name" id="name" #name="ngModel" placeholder="Name" required>
+                        <input class="form-control mb-3" type="email" name="email" [(ngModel)]="report.email" id="email" #email="ngModel" placeholder="Email" required>
+                        <input class="form-control mb-3" type="phone" name="phone" [(ngModel)]="report.phone" id="phone" #phone="ngModel" placeholder="Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" id="message" [(ngModel)]="report.message" #message="ngModel" cols="30" rows="10" placeholder="Message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-outline-success btn-lg btn-block" [ngClass]="{'btn-outline-danger' : !forma.valid}" [disabled]="!forma.valid">SEND <i class="fas fa-smile-beam" *ngIf="forma.valid"></i><i class="fas fa-times-circle" *ngIf="!forma.valid"></i></button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <footer>
+            <div class="container-fluid">
+                <div class="row justify-content-center text-white pt-4 pb-4">
+                    <div class="col mt-4">
+                        <p>Designed and built with all the love in the world. Code licensed <a href="https://creativecommons.org/licenses/by/3.0/"><span class="badge badge-dark display-4">MIT</span></a>, docs BY 3.0.
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</div>

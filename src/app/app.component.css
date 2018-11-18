@@ -1,0 +1,155 @@
+body {
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0px;
+    margin: 0px auto
+}
+
+
+/* SIDENAV */
+
+.sidenav a {
+    position: fixed;
+    left: -70px;
+    width: 130px;
+    height: 50px;
+    padding: 5px;
+    padding-left: 10px;
+    margin: 0%;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 0px 15px 15px 0px;
+    transition: 0.4s;
+}
+
+.sidenav h2 {
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    padding-left: 15px;
+    display: inline-block;
+}
+
+#sideNav_Home {
+    top: 80px;
+}
+
+#sideNav_About {
+    top: 140px;
+}
+
+#sideNav_Contact {
+    top: 200px;
+}
+
+.sidenav a:hover {
+    left: 0;
+}
+
+
+/* ---------------------------------------- */
+
+
+/*header{margin-top: 30px;}*/
+
+header .nav {
+    min-height: 80px;
+    overflow: hidden;
+    background: #fff;
+}
+
+
+/* --- LOGO ---*/
+
+header .logo span {
+    font-size: 40px;
+    display: inline-block;
+    margin: 0px;
+}
+
+header .logo {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+header .logo .icono {
+    color: #bfbfbf;
+}
+
+
+/* --- MENU ---*/
+
+header .menu {
+    padding: 0px;
+}
+
+header .menu a {
+    display: block;
+    padding: 0 30px;
+    text-decoration: none;
+    color: #fff;
+}
+
+header .menu a div span {
+    font-weight: 600;
+}
+
+.menu .c-1,
+#sideNav_Home {
+    background: #3da5e2;
+}
+
+.menu .c-2,
+#sideNav_About {
+    background: #005385;
+}
+
+.menu .c-3,
+#sideNav_Contact {
+    background: #003855;
+}
+
+.menu .c-1,
+#sideNav_Home:hover {
+    background: #1ba0ef;
+}
+
+.menu .c-2,
+#sideNav_About:hover {
+    background: #00426a;
+}
+
+.menu .c-3:hover,
+#sideNav_Contact {
+    background: #002d44;
+}
+
+
+/* --- SLIDER ---*/
+
+#slider .container {
+    padding: 0;
+}
+
+#slider col {
+    padding: 0;
+}
+
+
+/* --  GENERA ESPACIADO - MUY IMPORTANTE  -- */
+
+#home,
+#contact {
+    min-height: 100vh;
+    background-color: #252a30;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#about {
+    min-height: 100vh;
+    background-color: #ffffff;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
