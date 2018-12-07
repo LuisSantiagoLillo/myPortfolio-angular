@@ -1,8 +1,10 @@
 <!-- CONTACT -->
 <div class="bg-dark">
 
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15">
-        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="12" [disableDefaultUI]="false" [zoomControl]="false" [styles]="styles">
+        <agm-marker [latitude]="lat" [longitude]="lng">
+            <agm-info-window>Madrid</agm-info-window>
+        </agm-marker>
     </agm-map>
 
     <div class="container mt-4" id="contact">
@@ -11,8 +13,6 @@
                 <figcaption class="figure-caption text-right">My current location is Madrid, Spain.</figcaption>
             </div>
         </div>
-
-
 
         <div class="row mt-5 d-flex justify-content-center">
             <div class="col-2 mr-5" id="details">
@@ -69,7 +69,8 @@
                         <textarea class="form-control" name="message" id="message" [(ngModel)]="report.message" #message="ngModel" cols="30" rows="10" placeholder="Message" required></textarea>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-outline-success btn-lg btn-block" [ngClass]="{'btn-outline-danger' : !forma.valid}" [disabled]="!forma.valid">SEND <i class="fas fa-smile-beam" *ngIf="forma.valid"></i><i class="fas fa-times-circle" *ngIf="!forma.valid"></i></button>
+                        <button type="submit" *ngIf="forma.valid" class="btn btn-outline-success btn-lg btn-block" [ngClass]="{'btn-outline-danger' : !forma.valid}" [disabled]="!forma.valid">SEND <i class="fas fa-smile-beam" *ngIf="forma.valid"></i><i class="fas fa-times-circle" *ngIf="!forma.valid"></i></button>
+                        <button type="submit" *ngIf="!forma.valid" class="btn btn-outline-success btn-lg btn-block" [ngClass]="{'btn-outline-danger' : !forma.valid}" [disabled]="!forma.valid">FILL ALL THE FIELDS <i class="fas fa-smile-beam" *ngIf="forma.valid"></i><i class="fas fa-times-circle" *ngIf="!forma.valid"></i></button>
                     </div>
                 </form>
             </div>

@@ -2,7 +2,26 @@ body {
     background: #f2f2f2;
     font-family: 'Open Sans', sans-serif;
     padding: 0px;
-    margin: 0px auto
+    margin: 0px auto;
+}
+
+
+/* Banenr Card */
+
+.special-card {
+    max-width: 20rem;
+    left: 30vw;
+    -webkit-transition: bottom 1s;
+}
+
+.container-newList-300 {
+    top: -700px;
+    -webkit-transition: bottom 1s;
+}
+
+.container-newList-0 {
+    top: 10vh;
+    -webkit-transition: bottom 1s;
 }
 
 
@@ -20,7 +39,8 @@ body {
     text-decoration: none;
     font-size: 20px;
     border-radius: 0px 15px 15px 0px;
-    transition: 0.4s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
 }
 
 .sidenav h2 {

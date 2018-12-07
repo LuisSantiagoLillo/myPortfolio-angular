@@ -1,0 +1,11 @@
+img:hover {
+    border-radius: 20%;
+    transition: 1s;
+}
+
+img {
+    transition: 1s;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}

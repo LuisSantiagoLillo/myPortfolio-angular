@@ -18,9 +18,45 @@
     <!-- CHARTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
+            $('#exampleModal').modal('show');
+        });
+    </script>
 </head>
 
 <body>
+    <!-- Button trigger modal -->
+    <!--
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+      </button>
+    -->
+    <!-- Modal -->
+    <div class="modal fade specialModal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="exampleModalLabel"> Welcome to my personal Portfolio.</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card-body">
+                        <h5 class="card-title">Hi! My name is Luis and I am a enthusiastic JavaScript developer.</h5>
+                        <img src="assets/img/FINAL.png" class="rounded img-thumbnail" alt="Cinque Terre">
+
+                        <p class="card-text mt-4">Today I am a Wareable Developer working currently with Ionic4 and Angular6. You could visit the work experience section for more examples.</p>
+                        <p class="card-text mt-1">You're very very welcome.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="cerrar" type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <app-root></app-root>
 </body>
 
