@@ -28,16 +28,16 @@ export class AboutComponent implements OnInit {
    public radarChartData:any = [
      {data: [100, 95, 80, 100, 20], label: 'MEAN FullStack'},
      {data: [90, 80, 80, 100, 20], label: 'Web Design'},
-     {data: [60, 80, 20, 40, 80], label: 'J2EE'},
-     {data: [70, 70, 20, 40, 80], label: 'Android'}
+     {data: [60, 80, 20, 40, 80], label: 'J2EE'}
+     // {data: [70, 70, 20, 40, 80], label: 'VueJS'}
    ];
 
    // Bar
    // public barChartLabels:string[] = ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Angular', 'NodeJS', 'MongoDB', 'Ionic', 'Java', 'Android'];
-   public barChartLabels:string[] = ['Java', 'Android', 'Bootstrap', 'NodeJS', 'MongoDB', 'Angular', 'Ionic'];
+   public barChartLabels:string[] = ['VUE', 'NightWatch', 'Bootstrap', 'NodeJS', 'MongoDB', 'Angular', 'Ionic'];
 
    public barChartData:any[] = [
-    {data: [80, 70, 90, 70, 80, 90, 80, 0], label: 'Developer Evolution'}
+    {data: [80, 60, 90, 80, 80, 90, 80], label: 'Developer Evolution'}
   ];
   
    // events

@@ -11,11 +11,46 @@ export class HomeComponent implements OnInit {
   num = 0;
   cont = 0;
 
+// ANGULAR PARTICLES
+particlesStyle = {};
+particlesParams = {};
+particlesWidth = 100;
+particlesHeight = 100;
+
+
+
   constructor() {
 
   }
 
   ngOnInit() {
+    //ANGULAR PARTICLES        'z-index': -1,
+    this.particlesStyle = {
+      'position': 'fixed',
+      'width': '100%',
+      'height': '100%',
+      'z-index': 0,
+      'top': 0,
+      'left': 0,
+      'right': 0,
+      'bottom': 0
+    };
+
+    this.particlesParams = {
+      particles: {
+        number: {
+          value: 100
+        },
+        color: {
+          value: '#ff0000'
+        },
+        shape: {
+          type: 'triangle'
+        }
+      }
+    };
+    //  ******************************  //
+
      setInterval(() => {
        this.lista_activa();
      }, 2000);
@@ -106,6 +141,10 @@ export class HomeComponent implements OnInit {
     if (this.num_lista === 3) { this.num_lista = 0; }
 
 }
+
+
+
+
 
 }
 

@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Angular Form
-
+// ** Angular Particules
+import { ParticlesModule } from 'angular-particle';
+// **************************
 // ** Modules Angular Fire 2
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -24,6 +26,12 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FirebaseLinksService } from './services/firebase-links.service';
 import { BannerComponent } from './components/banner/banner.component';
+import { AboutMeComponent } from './components/about/about-me/about-me.component';
+import { Contact2Component } from './components/contact2/contact2.component';
+import { WriteLetterComponent } from './components/contact2/write-letter/write-letter.component';
+import { MapLocationComponent } from './components/contact2/map-location/map-location.component';
+import { TextLocationComponent } from './components/contact2/text-location/text-location.component';
+
 
 @NgModule({
   declarations: [
@@ -31,13 +39,20 @@ import { BannerComponent } from './components/banner/banner.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    BannerComponent
+    BannerComponent,
+    AboutMeComponent,
+    Contact2Component,
+    WriteLetterComponent,
+    MapLocationComponent,
+    TextLocationComponent
+
   ],
   imports: [
     BrowserModule,
     ChartsModule,
     BrowserAnimationsModule,
     FormsModule,
+    ParticlesModule,
     AngularFireModule.initializeApp(environment.firebase), // Angular Fire 2
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,

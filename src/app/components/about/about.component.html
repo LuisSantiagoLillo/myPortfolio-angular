@@ -1,6 +1,9 @@
 <!-- ABOUT ME -->
 <div class="container-fluid" id="about">
     <div class="row pt-5 ml-2">
+        <div class="col-12">
+            <app-about-me></app-about-me>
+        </div>
 
         <div class="col-12 col-lg-6">
             <div id="skills">
@@ -10,9 +13,9 @@
 
                     </div>
                     <!--  SKILLS BARRAS  -->
-                    <div class="col-12 card-body background-academic-degree text-right" id="skills_barras" *ngIf="!skills">
+                    <div class="col-12 card-body background-academic-degree text-right" id="skills_barras" *ngIf="skills">
                         <div>
-                            <p class="text-monospace">Favorite languages.</p>
+                            <p class="text-monospace">Favorite frameworks.</p>
                             <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
                         </div>
 
@@ -50,7 +53,7 @@
                     -->
                     </div>
                     <!--  SKILLS BARRAS  -->
-                    <div class="col-12 card-body background-academic-degree text-right" id="skills_barras" *ngIf="skills">
+                    <div class="col-12 card-body background-academic-degree text-right" id="skills_barras" *ngIf="!skills">
                         <div>
                             <p class="text-monospace">Favorite stacks.</p>
 
@@ -68,7 +71,7 @@
                 <div class="container pt-3 pb-3">
                     <p>Student in Software Development - Development of cross-platform applications (DAM), Computer and communications. Distance Modality from 2016 to 2018. </p>
                     <p>
-                        Avarage Grade of the second year <span class="badge badge-primary">9</span>
+                        Avarage Grade of the last year <span class="badge badge-primary">9</span>
                     </p>
                     <div>
                         <button class="btn btn-primary disabled mt-2">Data Access
@@ -94,7 +97,7 @@
         </div>
         <div class="col-12 pb-3 mt-4">
             <div id="works">
-                <h3 class="container text-muted text-center font-italic"><strong>Work <code>Experience</code> </strong></h3>
+                <h3 class="container text-muted text-center font-italic"><strong>Personal <code>Projects</code> </strong></h3>
                 <div class="row">
                     <div class="col mt-2 text-center">
                         <figure class="figure ml-5">

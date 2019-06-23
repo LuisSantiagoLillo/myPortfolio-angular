@@ -1,0 +1,21 @@
+<div class="col text-center pr-5 pb-3" id="form_contact">
+    <div *ngIf="error" class="alert alert-{{color}}">
+        <strong>{{title}}</strong> {{message2}}
+    </div>
+    <form (ngSubmit)="addMessage(forma)" #forma="ngForm" novalidate="">
+        <h4 class="text-center text-light">CONTACT ME</h4>
+
+        <div class="form-group">
+            <input class="form-control mb-3" type="text" name="name" [(ngModel)]="report.name" id="name" #name="ngModel" placeholder="Name" required>
+            <input class="form-control mb-3" type="email" name="email" [(ngModel)]="report.email" id="email" #email="ngModel" placeholder="Email" required>
+            <input class="form-control mb-3" type="phone" name="phone" [(ngModel)]="report.phone" id="phone" #phone="ngModel" placeholder="Phone" required>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" name="message" id="message" [(ngModel)]="report.message" #message="ngModel" cols="30" rows="10" placeholder="Message" required></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" *ngIf="forma.valid" class="btn btn-outline-success btn-lg btn-block" [ngClass]="{'btn-outline-danger' : !forma.valid}" [disabled]="!forma.valid">SEND <i class="fas fa-smile-beam" *ngIf="forma.valid"></i><i class="fas fa-times-circle" *ngIf="!forma.valid"></i></button>
+            <button type="submit" *ngIf="!forma.valid" class="btn btn-outline-success btn-lg btn-block" [ngClass]="{'btn-outline-danger' : !forma.valid}" [disabled]="!forma.valid">FILL ALL THE FIELDS <i class="fas fa-smile-beam" *ngIf="forma.valid"></i><i class="fas fa-times-circle" *ngIf="!forma.valid"></i></button>
+        </div>
+    </form>
+</div>

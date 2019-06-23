@@ -1,0 +1,14 @@
+.div-space {
+    height: 40vh;
+}
+
+.container-newDiv-2000 {
+    /*left: -2000px;*/
+    -webkit-transition: bottom 1s;
+    display: none;
+}
+
+.container-newDiv-0 {
+    /*left: 0;*/
+    -webkit-transition: bottom 1s;
+}

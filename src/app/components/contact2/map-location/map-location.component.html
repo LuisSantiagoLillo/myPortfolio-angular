@@ -1,0 +1,14 @@
+<!-- MAP -->
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="12" [disableDefaultUI]="false" [zoomControl]="false" [styles]="styles">
+    <agm-marker [latitude]="lat" [longitude]="lng">
+        <agm-info-window>Madrid</agm-info-window>
+    </agm-marker>
+</agm-map>
+
+<div class="container mt-4" id="contact">
+    <div class="row">
+        <div class="col-12">
+            <figcaption class="figure-caption text-right">My current location is Madrid, Spain.</figcaption>
+        </div>
+    </div>
+</div>
