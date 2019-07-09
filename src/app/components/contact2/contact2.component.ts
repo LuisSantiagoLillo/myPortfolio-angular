@@ -25,14 +25,22 @@ export class Contact2Component implements OnInit {
       const divTextLocation = document.getElementById('app-text-location');
       divSpace.remove();
       divMap.className = 'container-newDiv-0 animated fadeIn';
-      divTextLocation.className = 'container-newDiv-0 animated bounceInRight';
+      // divTextLocation.className = 'container-newDiv-0 animated bounceInRight';
+      divTextLocation.className = 'container-newDiv-0 animated zoomInUp col-md-8';
 
-    },3000);
 
+      const divWriteLetter = document.getElementById('app-write-letter');
+      // divWriteLetter.className = 'container-newDiv-0 animated bounceInRight';
+      divWriteLetter.className = 'container-newDiv-0 animated zoomInDown col-md-4';
+
+    }, 3000);
+    /*
     setTimeout(() => {
       const divWriteLetter = document.getElementById('app-write-letter');
-      divWriteLetter.className = 'container-newDiv-0 animated bounceInRight';
-    },4500);
+      // divWriteLetter.className = 'container-newDiv-0 animated bounceInRight';
+      divWriteLetter.className = 'container-newDiv-0 animated fadeIn';
+    }, 4500);
+    */
   }
 
 }
