@@ -39,7 +39,7 @@ particlesHeight = 100;
     this.particlesParams = {
       particles: {
         number: {
-          value: 100
+          value: 50
         },
         color: {
           value: '#ff0000'
@@ -69,9 +69,9 @@ particlesHeight = 100;
 
 
   escribir_webSites() {
-    const webSites = new Array('W', 'e', 'b', ' ', 'S', 'i', 't', 'e', 's', '.', '', '', '', '', '', '');
-    const webApplicatios = new Array('W', 'e', 'b', ' ', 'A', 'p', 'p', 'l', 'i', 'c', 'a', 't', 'i', 'o', 'n', 's', '.', '', '', '', '', '', '', '');
-    const userInterfaces = new Array('U', 's', 'e', 'r', ' ', 'I', 'n', 't', 'e', 'r', 'f', 'a', 'c', 'e', 's', '.', '', '', '', '', '', '', '');
+    const webSites = new Array('W', 'e', 'b', ' ', 'S', 'i', 't', 'e', 's', '.', '', '', '', '', '', '', '', '', '', '', '');
+    const webApplicatios = new Array('W', 'e', 'b', ' ', 'A', 'p', 'p', 'l', 'i', 'c', 'a', 't', 'i', 'o', 'n', 's', '.', '', '', '', '', '', '', '', '', '', '', '', '');
+    const userInterfaces = new Array('U', 's', 'e', 'r', ' ', 'I', 'n', 't', 'e', 'r', 'f', 'a', 'c', 'e', 's', '.', '', '', '', '', '', '', '', '', '', '', '', '');
 
     if (this.cont === 0) {
         document.getElementById('message').innerHTML += webSites[this.num];

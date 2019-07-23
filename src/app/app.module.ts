@@ -31,6 +31,7 @@ import { Contact2Component } from './components/contact2/contact2.component';
 import { WriteLetterComponent } from './components/contact2/write-letter/write-letter.component';
 import { MapLocationComponent } from './components/contact2/map-location/map-location.component';
 import { TextLocationComponent } from './components/contact2/text-location/text-location.component';
+import { WriteLetter2Component } from './components/contact2/write-letter2/write-letter2.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { TextLocationComponent } from './components/contact2/text-location/text-
     Contact2Component,
     WriteLetterComponent,
     MapLocationComponent,
-    TextLocationComponent
+    TextLocationComponent,
+    WriteLetter2Component
 
   ],
   imports: [

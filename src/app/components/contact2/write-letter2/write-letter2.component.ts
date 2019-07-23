@@ -4,11 +4,11 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/fire
 import { FirebaseLinksService } from 'src/app/services/firebase-links.service';
 
 @Component({
-  selector: 'app-write-letter',
-  templateUrl: './write-letter.component.html',
-  styleUrls: ['./write-letter.component.css']
+  selector: 'app-write-letter2',
+  templateUrl: './write-letter2.component.html',
+  styleUrls: ['./write-letter2.component.css']
 })
-export class WriteLetterComponent implements OnInit {
+export class WriteLetter2Component implements OnInit {
 // ** User Form
 report = {
   name: null,
@@ -23,6 +23,19 @@ report = {
   message2 = '';
   color = '';
   // ********
+
+  badge_name = true;
+  badge_email = false;
+  badge_text = false;
+
+  input_name = true;
+  input_email = false;
+  input_text = false;
+
+  name1 = 'Name';
+  email1 = 'Email';
+  text1 = 'Text';
+
   private itemsCollection: AngularFirestoreCollection<Mensaje>;
 
   constructor(
@@ -30,11 +43,11 @@ report = {
     public _linkService: FirebaseLinksService
   ) {
     this.itemsCollection = this.afs.collection<Mensaje>('portafolio');
+
   }
 
   ngOnInit() {
   }
-
   showError(message2: string, color: string) {
     this.message2 = message2;
     this.color = color;
@@ -63,8 +76,8 @@ report = {
     }
   }
 
-}
 
+}
 
 export interface Mensaje {
   nombre: string;
